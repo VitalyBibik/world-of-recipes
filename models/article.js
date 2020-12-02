@@ -14,6 +14,10 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  recipe: {
+    type: String,
+    required: true,
+  },
   date: {
     type: String,
     required: true,
@@ -45,9 +49,12 @@ const articleSchema = new mongoose.Schema({
     required: true,
   },
 });
+/*
 articleSchema.methods.delOwner = function delOwner() {
   const obj = this.toObject();
   delete obj.owner;
   return obj;
 };
+*/
+
 module.exports = mongoose.model('article', articleSchema);
